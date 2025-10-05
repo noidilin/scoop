@@ -1,7 +1,9 @@
+# this tells the auto-pr script which upstream repository to create pull requests against when automated updates are found by checkver.ps1.
+
 param(
     # overwrite upstream param
     # [String]$upstream = "<username>/<bucketname>:main"
-    [String]$upstream = "noidilin/scoop:main"
+    [String]$upstream = "noidilin/scoop:master"
 )
 
 if (!$env:SCOOP_HOME) { $env:SCOOP_HOME = Convert-Path (scoop prefix scoop) }
